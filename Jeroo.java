@@ -53,7 +53,7 @@ public class Jeroo extends JerooBase {
      */
     public void disableNet() {
       if (isFlower(HERE)){
-        if (!isNet(AHEAD)){
+        if (isNet(AHEAD)){
           pick();
           toss();
           hop();
@@ -67,6 +67,14 @@ public class Jeroo extends JerooBase {
      */
     public void hopCheckFlowersOr() 
     {
+      if (isFlower(LEFT)){
+        hop();
+      }else if (isFlower(RIGHT)){
+        hop();
+      }
+      else{
+        ;
+      }
 
     }
 
@@ -76,6 +84,15 @@ public class Jeroo extends JerooBase {
      */
     public void hopCheckFlowersAnd() 
     {
+      if(isFlower(RIGHT)){
+        if(isFlower(LEFT)){
+          hop();
+        } else{
+          ;
+        }
+      } else{
+        ;
+      }
 
     }
 

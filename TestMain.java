@@ -88,21 +88,21 @@ public class TestMain implements Directions
 
     @Test
     public void test4_hopCheckFlowersAnd() {
-        Jeroo j1 = new Jeroo(8, 3, NORTH, 0);
-        j1.hopCheckFlowersOr();
-        assertTrue("should be Jeroo at (8, 3)", Map.getInstance().isJeroo(8, 3));
+        Jeroo j1 = new Jeroo(11, 3, NORTH, 0);
+        j1.hopCheckFlowersAnd();
+        assertTrue("should be Jeroo at (11, 3)", Map.getInstance().isJeroo(11, 3));
 
-        Jeroo j2 = new Jeroo(8, 6, NORTH, 0);
-        j2.hopCheckFlowersOr();
-        assertTrue("should be Jeroo at (7, 6)", Map.getInstance().isJeroo(7, 6));
+        Jeroo j2 = new Jeroo(11, 6, NORTH, 0);
+        j2.hopCheckFlowersAnd();
+        assertTrue("should be Jeroo at (7, 9)", Map.getInstance().isJeroo(10, 6));
 
-        Jeroo j3 = new Jeroo(8, 9, NORTH, 0);
-        j3.hopCheckFlowersOr();
-        assertTrue("should be Jeroo at (8, 9)", Map.getInstance().isJeroo(8, 9));
+        Jeroo j3 = new Jeroo(11, 9, NORTH, 0);
+        j3.hopCheckFlowersAnd();
+        assertTrue("should be Jeroo at (11, 9)", Map.getInstance().isJeroo(11, 9));
 
-        Jeroo j4 = new Jeroo(8, 12, NORTH, 0);
-        j4.hopCheckFlowersOr();
-        assertTrue("should be Jeroo at (8, 12)", Map.getInstance().isJeroo(8, 12));
+        Jeroo j4 = new Jeroo(11, 12, NORTH, 0);
+        j4.hopCheckFlowersAnd();
+        assertTrue("should be Jeroo at (11, 12)", Map.getInstance().isJeroo(11, 12));
     }
 
 }
