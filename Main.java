@@ -21,7 +21,7 @@ public class Main implements Directions {
         TestMain test = new TestMain();
         test.setup();
         test.test1_pickRectangle();
-       // test.test2_disableNet();
+        test.test2_disableNet();
         //test.test3_hopCheckFlowersOr();
        // test.test4_hopCheckFlowersAnd();
 
