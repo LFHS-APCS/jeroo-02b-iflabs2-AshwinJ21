@@ -15,9 +15,35 @@ public class Jeroo extends JerooBase {
      * IMPORTANT:  You should be calling the same helper method
      *             four times to achieve this.
      */
+
+
+    public void hopPick(){
+      hop();
+      pick();
+    }
+
+    public void pickRow(){
+      hopPick();
+      hopPick();
+      hopPick();
+      hop();
+    }
+
     public void pickRectangle()
     {
-
+      pickRow();
+      turn(RIGHT);
+      hop();
+      turn(RIGHT);
+      pickRow();
+      turn(LEFT);
+      hop();
+      turn(LEFT);
+      pickRow();
+      turn(RIGHT);
+      hop();
+      turn(RIGHT);
+      pickRow();
     }
 
     /**
@@ -26,7 +52,13 @@ public class Jeroo extends JerooBase {
      * and then hop onto the newly clear space.
      */
     public void disableNet() {
-
+      if (isFlower(HERE)){
+        if (!isNet(AHEAD)){
+          pick();
+          toss();
+          hop();
+        }
+      }
     }
 
     /**
